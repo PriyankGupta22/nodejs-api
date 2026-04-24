@@ -1,0 +1,42 @@
+1. Making a folder
+mkdir nodejs-api
+
+2. getting into it 
+cd nodejs-api
+
+3. Initializing nodejs project
+npm init -y
+
+4. Installing express and @types/express dependencies
+npm i express
+npm i -D @types/express
+
+5. Making index.js file
+touch index.js
+
+6. Code in index.js
+const express = require("express");
+const app = express();
+
+app.get("/health", (req, res) => {
+    res.status(200).json({ status: "OK" });
+});
+
+app.listen(8080, () => {
+    console.log("Server running on port 8080");
+});
+
+7. Running index.js
+node index.js
+
+8. Output
+Server running on port 8080
+{"status":"OK"}
+
+9. Git commands 
+git init
+git remote add origin https://github.com/PriyankGupta22/nodejs-api.git
+git add .
+git commit -m "Done Question1, Question2, Question3 this repo contains these files"
+git push origin main
+
